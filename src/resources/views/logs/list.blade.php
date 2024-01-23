@@ -12,8 +12,7 @@
     </div>
     <div class="card-body">
       <p class="text-justify">
-        This section is designed to show you important information regarding your registered drivers and the connector health.
-        You can use elements from this box in order to filter entries from the table.
+        {{ trans('seat-connector::seat.logs_description') }}
       </p>
 
       <h4>Drivers</h4>
@@ -31,44 +30,44 @@
         <div class="row">
           <div class="col">
             <button type="button" class="btn btn-xs btn-block btn-default" data-level="debug">
-              <i class="fas fa-bug"></i> Debug
+              <i class="fas fa-bug"></i> {{ trans('seat-connector::seat.log_level_debug') }}
             </button>
           </div>
           <div class="col">
             <button type="button" class="btn btn-xs btn-block btn-info" data-level="info">
-              <i class="fas fa-info"></i> Info
+              <i class="fas fa-info"></i> {{ trans('seat-connector::seat.log_level_info') }}
             </button>
           </div>
           <div class="col">
             <button type="button" class="btn btn-xs btn-block btn-success" data-level="notice">
-              <i class="fas fa-question-circle"></i> Notice
+              <i class="fas fa-question-circle"></i> {{ trans('seat-connector::seat.log_level_notice') }}
             </button>
           </div>
           <div class="col">
             <button type="button" class="btn btn-xs btn-block btn-warning" data-level="warning">
-              <i class="fas fa-exclamation"></i> Warning
+              <i class="fas fa-exclamation"></i> {{ trans('seat-connector::seat.log_level_warning') }}
             </button>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col">
             <button type="button" class="btn btn-xs btn-block btn-danger" data-level="error">
-              <i class="fas fa-exclamation-circle"></i> Error
+              <i class="fas fa-exclamation-circle"></i> {{ trans('seat-connector::seat.log_level_error') }}
             </button>
           </div>
           <div class="col">
             <button type="button" class="btn btn-xs btn-block bg-maroon" data-level="critical">
-              <i class="fab fa-free-code-camp"></i> Critical
+              <i class="fab fa-free-code-camp"></i> {{ trans('seat-connector::seat.log_level_critical') }}
             </button>
           </div>
           <div class="col">
             <button type="button" class="btn btn-xs btn-block bg-orange" data-level="alert">
-              <i class="fas fa-exclamation-triangle"></i> Alert
+              <i class="fas fa-exclamation-triangle"></i> {{ trans('seat-connector::seat.log_level_alert') }}
             </button>
           </div>
           <div class="col">
             <button type="button" class="btn btn-xs btn-block bg-pink" data-level="emergency">
-              <i class="fas fa-life-ring"></i> Emerg.
+              <i class="fas fa-life-ring"></i> {{ trans('seat-connector::seat.log_level_emergency') }}
             </button>
           </div>
         </div>

@@ -12,8 +12,8 @@
 @section('right')
     @if(empty(config('seat-connector.drivers', [])))
         <div class="callout callout-warning">
-            <h4>No driver available!</h4>
-            <p>In order to use this page, you need to install a seat-connector driver.</p>
+            <h4>{{trans('seat-connector::seat.no_driver_available')}}</h4>
+            <p>{{trans('seat-connector::seat.install_seat_driver_message')}}</p>
         </div>
     @endif
 
@@ -23,7 +23,7 @@
 @push('javascript')
   <script>
       $('#connector-filter-type').change(function() {
-          var filter_type = $('#connector-filter-type').val();
+          let filter_type = $('#connector-filter-type').val();
 
           $.each(['connector-filter-users', 'connector-filter-roles', 'connector-filter-corporations', 'connector-filter-titles', 'connector-filter-alliances', 'connector-filter-squads'], function (key, value) {
               if (value === ('connector-filter-' + filter_type)) {

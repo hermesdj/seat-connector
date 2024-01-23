@@ -6,8 +6,8 @@
 @section('full')
   @if(config('seat-connector.drivers', []) == [])
     <div class="callout callout-info">
-      <h4>Missing platforms</h4>
-      <p>The administrator of this instance didn't configure any platform yet.<br/>Please come back later.</p>
+      <h4>{{trans('seat-connector::seat.missing_platforms')}}</h4>
+      <p>{!! trans('seat-connector::seat.missing_platforms_message') !!}</p>
     </div>
   @else
     @foreach($drivers->split(ceil($drivers->count() / 4)) as $row)

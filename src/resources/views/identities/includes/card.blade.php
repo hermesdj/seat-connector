@@ -41,11 +41,11 @@
         <div class="col-8">
           @if($identities->where('connector_type', $driver)->isNotEmpty())
             <span class="badge badge-success p-1">
-              <i class="fas fa-check-circle mr-1"></i> Registered
+              <i class="fas fa-check-circle mr-1"></i> {{trans('seat-connector::seat.status_registered')}}
             </span>
           @else
             <span class="badge badge-danger p-1">
-              <i class="fas fa-times-circle mr-1"></i> Unregistered
+              <i class="fas fa-times-circle mr-1"></i> {{trans('seat-connector::seat.status_unregistered')}}
             </span>
           @endif
         </div>
@@ -58,7 +58,7 @@
     @endif
     <a class="small-box-footer" href="{{ route(sprintf('seat-connector.drivers.%s.registration', $driver)) }}" target="_blank">
       <i class="fa fa-arrow-circle-right"></i>
-      Join Server
+      {{trans('seat-connector::seat.join_server')}}
     </a>
   </div>
 </div>
